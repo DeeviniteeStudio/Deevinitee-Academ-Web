@@ -1,0 +1,1 @@
+<a href="#" onclick="loadPage('resorts')">Resorts</a>

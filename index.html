@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deevinitee Academ & Resorts</title>
+ <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('file:///C:/Users/CRSMS/Pictures/De.jpg.png'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      animation: bgZoom 30s ease-in-out infinite;
+      z-index: -2;
+    }
+
+    @keyframes bgZoom {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      color: white;
+      position: relative;
+    }
+
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .auth-buttons button {
+      margin-left: 1rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login {
+      background-color: transparent;
+      color: white;
+      border: 1px solid white;
+    }
+
+    .register {
+      background-color: #ffd700;
+      color: black;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      height: calc(100vh - 70px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    /* Login/Register Modal Styles */
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .modal-content {
+      background: white;
+      color: black;
+      padding: 2rem;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+      position: relative;
+    }
+
+    .modal-content h2 {
+      margin-bottom: 1rem;
+    }
+
+    .modal-content input {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+    }
+
+    .modal-content button {
+      width: 100%;
+      padding: 0.6rem;
+      background: #0d47a1;
+      color: white;
+      border: none;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.8rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: red;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .auth-buttons {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .mobile-menu.show {
+        display: flex;
+        background-color: rgba(0,0,0,0.7);
+        padding: 1rem 2rem;
+      }
+
+      .mobile-menu a,
+      .mobile-menu button {
+        color: white;
+        background: none;
+        border: none;
+        text-align: left;
+      }
+
+      .mobile-menu button.register {
+        background: #ffd700;
+        color: black;
+        margin-top: 0.5rem;
+      }
+    }
+    </style>
+    <style>
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('your-image.jpg'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      animation: bgZoom 30s ease-in-out infinite;
+      z-index: -2;
+    }
+
+    @keyframes bgZoom {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      color: white;
+      position: relative;
+    }
+
+    .nav-logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: orangered;
+    }
+
+  .nav-logo1 {
+  font-size: x-small;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: orangered;
+     }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .auth-buttons button {
+      margin-left: 1rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login {
+      background-color: transparent;
+      color: white;
+      border: 1px solid white;
+    }
+
+    .register {
+      background-color: #ffd700;
+      color: black;
+      width: 50;
+      height: 20;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      height: calc(100vh - 70px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: orangered;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    /* Login/Register Modal Styles */
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .modal-content {
+      background: white;
+      color: black;
+      padding: 2rem;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+      position: relative;
+    }
+
+    .modal-content h2 {
+      margin-bottom: 1rem;
+    }
+
+    .modal-content input {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+    }
+
+    .modal-content button {
+      width: 100%;
+      padding: 0.6rem;
+      background: black;
+      color: white;
+      border: none;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.8rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: red;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .auth-buttons {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .mobile-menu.show {
+        display: flex;
+        background-color: rgba(0,0,0,0.7);
+        padding: 1rem 2rem;
+      }
+
+      .mobile-menu a,
+      .mobile-menu button {
+        color: white;
+        background: none;
+        border: none;
+        text-align: left;
+      }
+
+      .mobile-menu button.register {
+        background: #ffd700;
+        color: black;
+        margin-top: 0.5rem;
+      }
+    }
+    </style>
+<body>
+  <div class="background"></div>
+  <div class="overlay"></div>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>    
+      <div class="nav-logo">Deevinitee</div></li>
+      <div class="nav-logo1">Academ & Resorts</div></li>
+    </ul>
+
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="academic.html"onclick="loadPage('Academy')">Academy</a>
+       <a href="Resorts.html" onclick="loadPage('resorts')">Resorts</a>
+      <a href="about.html"onclick="loadPage('about us')">About us</a>
+      <a href="contact.html"onclick="loadPage('contact')">Contact</a>
+    </div>
+    <div class="auth-buttons">
+      <button class="login" onclick="openModal('login')">Login</button>
+      <button class="register" onclick="openModal('register')">Register</button>
+    </div>
+    <div class="hamburger" onclick="toggleMobileMenu()">☰</div>
+  </nav>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#">Home</a>
+    <a href="file:///C:/Users/CRSMS/Pictures/DEE/CSS/academic.html">Academy</a>
+    <a href="file:///C:/Users/CRSMS/Pictures/DEE/CSS/Resorts.html">Resorts</a>
+    <a href="about.html">About us</a>
+    <a href="#">Contact</a>
+    <button class="login" onclick="openModal('login')">Login</button>
+    <button class="register" onclick="openModal('register')">Register</button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h1>Welcome to Deevinitee Academ & Resorts</h1>
+    <p>A perfect blend of academic excellence and luxurious relaxation. Empower your mind and refresh your soul.</p>
+    
+    
+    <p>Where learning meets luxury in a vibrant, nature-filled environment.</p>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('login')">&times;</span>
+      <h2>Login</h2>
+      <input type="text" placeholder="Username">
+      <input type="password" placeholder="Password">
+      <button>Login</button>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div class="modal" id="registerModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('register')">&times;</span>
+      <h2>Register</h2>
+      <input type="text" placeholder="Full Name">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button>Register</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('show');
+    }
+
+    function openModal(type) {
+      if (type === 'login') {
+        document.getElementById('loginModal').style.display = 'flex';
+      } else if (type === 'register') {
+        document.getElementById('registerModal').style.display = 'flex';
+      }
+    }
+
+    function closeModal(type) {
+      if (type === 'login') {
+        document.getElementById('loginModal').style.display = 'none';
+      } else if (type === 'register') {
+        document.getElementById('registerModal').style.display = 'none';
+      }
+    }
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Deevinitee Academ & Resorts. All rights reserved.</p>
+  </footer>
+
+
+</body>
+</html>

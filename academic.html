@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Academics | Deevinitee Academ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Deevinitee Academ</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resorts.html">Resorts</a></li>
+        <li><a href="academic.html" class="active">Academy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Academic Programs</h1>
+    <p>Explore our flexible and professional academic offerings both Online & Offline</p>
+  </section>
+
+  <section class="programs">
+    <div class="section-title">Available Programs</div>
+    <div class="program-cards">
+      <div class="card">
+        <h3>🔬 Faculty of Science and Technology</h3>
+        <p>
+          <ul>
+          <li>Certificate in Computer Science</li>
+
+          <li>Certificate in Information Technology</li>
+
+          <li>Certificate in Data Science & Artificial Intelligence</li>
+
+          <li>Certificate in Industrial Chemistry</li>
+
+          <li>Certificate in Biochemistry</li>
+
+          <li>Certificate in Physics with Electronics</li>
+        </ul>
+      </p>
+      </div>
+      <div class="card">
+        <h3>🎨 Faculty of Arts, Media & Design</h3>
+        <p>
+          <ul>
+          <lil>B.A. Creative & Fine Arts</lil>
+
+          <li>B.A. Mass Communication & Journalism</li>
+
+          <li>B.A. Performing & Theatre Arts</li>
+
+          <li>Diploma in Film & Video Production</li>
+
+          <li>Certificate in Digital Photography</li>
+
+          <li>Certificate in Graphics & Multimedia Design</li>.
+        </ul>
+      </p>
+      </div>
+      <div class="card">
+        <h3>💼 Faculty of Management and Business Studies</h3>
+        <p>
+          <ul>
+            <li>B.Sc. Business Administration</li>
+
+            <li>B.Sc. Marketing & Advertising</li>
+
+            <li>B.Sc. Accounting and Finance</li>
+
+            <li>B.Sc. Human Resource Management</li>
+
+            <li>Diploma in Entrepreneurship & Innovation</li>
+
+            <li>Certificate in Business Communication</li>
+            </ul>
+          </p>
+      </div>
+      <div class="card">
+        <h3> 💻Faculty of Computer Technology</h3>
+        <p>
+          <ul>
+                <li>Diploma in Web Design & Development</li>
+
+                <li>Diploma in Software Engineering</li>
+
+                <li>Certificate in Digital Marketing Technology</li>
+
+                <li>Certificate in Cybersecurity Fundamentals</li>
+
+                <li>Certificate in Mobile App Development</li>
+
+</ul>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>✝️ Faculty of Christian Art & Science</h3>
+        <p>
+          <ul><li>Certificate in Christian Theology and Leadership</li>
+
+        <li>Diploma in Christian Creative Arts (Music, Drama, Dance)</li>
+
+        <li>Certificate in Christian Counseling & Psychology</li>
+
+        <li>Certificate in Gospel Media Production</li>
+
+        <li>Certificate in Christian Event Management</li>
+
+        <li>Certificate in Christian Fashion & Modesty Design</li>.</ul>
+          </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="applications">
+    <div class="section-title">Apply Now</div>
+    <div class="app-sections">
+      <div class="app-card">
+        <h2>Online Application</h2>
+        <form class="apply-form" onsubmit="submitOnline(event)">
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email Address" required>
+          <select required>
+            <option value="">Select Program</option>
+            <option value="science">Science & Technology</option>
+            <option value="arts">Arts & Humanities</option>
+            <option value="business">Business & Economics</option>
+            <option value="vocational">Vocational Training</option>
+          </select>
+          <button type="submit">Submit Online</button>
+        </form>
+      </div>
+
+      <div class="app-card">
+        <h2>Offline Application</h2>
+        <p>Visit our campus or download the form below to apply in person.</p>
+        <a href="offline-application.pdf" download class="download-btn">Download Offline Form</a>
+        <p><strong>Address:</strong> plot 627 Shagari Quarters, Abuja Nigeria</p>
+        <p><strong>Phone:</strong> +234-704-2850-560</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Deevinitee Academ & Resorts. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function submitOnline(e) {
+      e.preventDefault();
+      alert("Your online application was submitted!");
+    }
+  </script>
+</body>
+</html

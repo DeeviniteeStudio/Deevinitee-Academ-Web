@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Deevinitee Academ Application Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>🎓 Deevinitee Academ Application Form</h2>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+      <div class="section" id="personal-info">
+        <h3 class="section-title">🧍 Personal Information</h3>
+
+        <label>Full Name</label>
+        <input type="text" name="fullname" required>
+
+        <label>Date of Birth</label>
+        <input type="date" name="dob" required>
+
+        <label>Gender</label>
+        <select name="gender" required>
+          <option value="">Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" required>
+
+        <label>Email Address</label>
+        <input type="email" name="email" required>
+
+        <label>Passport Photo (JPG, PNG)</label>
+        <input type="file" name="passport" accept="image/*" required>
+      </div>
+
+      <div class="section" id="nationality-info">
+        <h3 class="section-title">🌍 Nationality & Identity</h3>
+
+        <label>Nationality</label>
+        <input type="text" name="nationality" required>
+
+        <label>State/Province</label>
+        <input type="text" name="state" required>
+
+        <label>National ID / Passport Number</label>
+        <input type="text" name="id_number" required>
+      </div>
+
+      <div class="section" id="education-info">
+        <h3 class="section-title">🎓 Educational Background</h3>
+
+        <label>Highest Qualification</label>
+        <select name="qualification" required>
+          <option value="">Select</option>
+          <option>SSCE / High School</option>
+          <option>Diploma</option>
+          <option>Bachelor's Degree</option>
+          <option>Master's Degree</option>
+          <option>Ph.D</option>
+        </select>
+
+        <label>Previous Institution</label>
+        <input type="text" name="previous_school" required>
+
+        <label>Year Graduated</label>
+        <input type="number" name="graduation_year" min="1950" max="2099" required>
+
+        <label>Program Applying For</label>
+        <input type="text" name="desired_program" required>
+
+        <label>Preferred Mode of Study</label>
+        <select name="study_mode" required>
+          <option value="">Select</option>
+          <option>Online</option>
+          <option>Offline</option>
+          <option>Hybrid</option>
+        </select>
+      </div>
+
+      <button type="submit">📤 Submit Application</button>
+    </form>
+  </div>
+
+</body>
+</html>

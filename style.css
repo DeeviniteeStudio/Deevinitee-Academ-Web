@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url(file:///C:/Users/CRSMS/Pictures/De.jpg.png);
+  background-size: cover;
+  background-position: center;
+  color: #222;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: black;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active,
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background: linear-gradient(to right, black, grey); 
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 1rem 0 0rem;
+  color: black;
+}
+
+.program-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 0 2rem;
+}
+
+.card {
+  background: grey;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.app-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.app-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.apply-form input,
+.apply-form select,
+.apply-form button {
+  display: block;
+  width: 50%;
+  margin-bottom: 0rem;
+  padding: 0.25rem;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+}
+
+.apply-form button {
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.apply-form button:hover {
+  background: #4059b1;
+}
+
+.download-btn {
+  display: inline-block;
+  background: red;
+  color: white;
+  padding: 0.3rem 1.0rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+/* ===== Body and Container ===== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #f0f4f7, #d1e3f5);
+  padding: 40px;
+  margin: 0;
+}
+
+.form-container {
+  background: white;
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ===== Heading ===== */
+h2 {
+  text-align: center;
+  color: #2b3a55;
+  margin-bottom: 20px;
+}
+
+/* ===== Labels and Inputs ===== */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input[type="file"] {
+  padding: 5px;
+}
+
+/* ===== Button ===== */
+button {
+  background-color: #2b3a55;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e2d40;
+}
+
+/* ===== Section Titles ===== */
+.section-title {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #2b3a55;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
