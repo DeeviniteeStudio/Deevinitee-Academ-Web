@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Passport Upload Preview</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .passport-container {
+      width: 160px;
+      height: 160px;
+      border: 2px dashed #4CAF50;
+      border-radius: 12px;
+      background-color: #fff;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .passport-container label {
+      width: 100%;
+      height: 100%;
+      display: block;
+      text-align: center;
+      line-height: 160px;
+      color: #777;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .passport-container input[type="file"] {
+      display: none;
+    }
+
+    .passport-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="passport-container">
+    <label for="passportInput">Upload Passport</label>
+    <input type="file" id="passportInput" accept="image/*" onchange="loadPassport(event)">
+    <img id="passportPreview" alt="Passport Preview">
+  </div>
+
+  <script>
+    function loadPassport(event) {
+      const image = document.getElementById('passportPreview');
+      image.src = URL.createObjectURL(event.target.files[0]);
+      image.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
